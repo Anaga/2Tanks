@@ -5,25 +5,24 @@
 #include <QLCDNumber>
 
 static Tank *pTank1 ;
+    QString QsTemp;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
 
     ui->setupUi(this);
+    QsTemp = "Input flow %1 mil/sec";
+    QsTemp = QsTemp.arg(0,3);
+    ui->label_G1In->setText(QsTemp);
+    ui->label_G2In->setText(QsTemp);
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
     timer->start(100);
     pTank1 = new Tank(this);
 
-//    pTank1->set_T12_OutputValve(OPEN);
-//    pTank1->set_T1_OutputValve(OPEN);
-//    pTank1->set_T2_OutputValve(OPEN);
-
     connect(timer, SIGNAL (timeout()), pTank1, SLOT(tik()));
-
     connect(pTank1, SIGNAL(t1_HeightChange(float)),this, SLOT(updateT1(float)));
-
     connect(pTank1, SIGNAL(t2_HeightChange(float)),this, SLOT(updateT2(float)));
 }
 
@@ -35,11 +34,17 @@ MainWindow::~MainWindow()
 void MainWindow::on_dialQ1In_valueChanged(int value)
 {
     pTank1->set_T1_InputFlow(value*MAX_FLOW);
+    QsTemp = "Input flow %1 mil/sec";
+    QsTemp = QsTemp.arg(value,3);
+    ui->label_G1In->setText(QsTemp);
 }
 
 void MainWindow::on_dialQ2In_valueChanged(int value)
 {
     pTank1->set_T2_InputFlow(value*MAX_FLOW);
+    QsTemp = "Input flow %1 mil/sec";
+    QsTemp = QsTemp.arg(value,3);
+    ui->label_G2In->setText(QsTemp);
 }
 
 void MainWindow::on_pushButton_Q1Out_clicked(bool checked)

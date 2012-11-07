@@ -89,8 +89,11 @@ void Tank::tik()
    x2 = m_t2_height + (a+b-c)*secInTik;
 
 
-   m_t1_height = x1;
-   m_t2_height = x2;
+   if (x1>=0) m_t1_height = x1;
+   else m_t1_height = 0;
+
+   if (x2>=0) m_t2_height = x2;
+   else m_t2_height = 0;
 
    emit t1_HeightChange(m_t1_height);
    emit t2_HeightChange(m_t2_height);
