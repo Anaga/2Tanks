@@ -69,14 +69,7 @@ void MainWindow::on_pushButton_Q3_clicked(bool checked)
 
 void MainWindow::update()
 {
-//   ui->progressBar1->setValue(pTank1->getHeight());
-//   ui->label_G1Out->setText(QString::number(pTank1->getGate2Flow()));
 
-//   ui->progressBar2->setValue(pTank2->getHeight());
-//   ui->label_G2Out->setText(QString::number(pTank2->getGate2Flow()));
-
-//   ui->label_G3a->setText(QString::number(pTank1->getGate3Flow()));
-//   ui->label_G3b->setText(QString::number(pTank2->getGate3Flow()));
 }
 
 void MainWindow::updateT1(float height1)
@@ -97,28 +90,28 @@ void MainWindow::updateT2(float height2)
 
 void MainWindow::updateT1Flow1(float f)
 {
-   QsTemp = "Output flow %1 mil/sec";
+   QsTemp = "Output flow\n%1 mil/sec";
    QsTemp = QsTemp.arg(f,3);
    ui->label_G1Out->setText(QsTemp);
 }
 
 void MainWindow::updateT1Flow2(float f)
 {
-   QsTemp = "Input / Output flow %1 mil/sec";
+   QsTemp = "Input / Output flow\n%1 mil/sec";
    QsTemp = QsTemp.arg(f,3);
    ui->label_G3a->setText(QsTemp);
 }
 
 void MainWindow::updateT2Flow1(float f)
 {
-   QsTemp = "Output flow %1 mil/sec";
+   QsTemp = "Output flow\n%1 mil/sec";
    QsTemp = QsTemp.arg(f,3);
    ui->label_G2Out->setText(QsTemp);
 }
 
 void MainWindow::updateT2Flow2(float f)
 {
-   QsTemp = "Input / Output flow %1 mil/sec";
+   QsTemp = "Input / Output flow\n%1 mil/sec";
    QsTemp = QsTemp.arg(f,3);
    ui->label_G3b->setText(QsTemp);
 }
