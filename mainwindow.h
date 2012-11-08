@@ -31,6 +31,11 @@ private slots:
    void updateT1(float);
    void updateT2(float);
 
+   void updateT1Flow1(float);
+   void updateT1Flow2(float);
+   void updateT2Flow1(float);
+   void updateT2Flow2(float);
+
 private:
     Ui::MainWindow *ui;
 };

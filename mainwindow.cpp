@@ -24,6 +24,11 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer, SIGNAL (timeout()), pTank1, SLOT(tik()));
     connect(pTank1, SIGNAL(t1_HeightChange(float)),this, SLOT(updateT1(float)));
     connect(pTank1, SIGNAL(t2_HeightChange(float)),this, SLOT(updateT2(float)));
+    connect(pTank1, SIGNAL (t1_Output_Flow_1(float)),this,SLOT(updateT1Flow1(float)));
+    connect(pTank1, SIGNAL (t1_Output_Flow_2(float)),this,SLOT(updateT1Flow2(float)));
+    connect(pTank1, SIGNAL (t2_Output_Flow_1(float)),this,SLOT(updateT2Flow1(float)));
+    connect(pTank1, SIGNAL (t2_Output_Flow_2(float)),this,SLOT(updateT2Flow2(float)));
+
 }
 
 MainWindow::~MainWindow()
@@ -88,4 +93,32 @@ void MainWindow::updateT2(float height2)
    float h = height2;
    h= h*1000;
    ui->progressBar2->setValue((int)h);
+}
+
+void MainWindow::updateT1Flow1(float f)
+{
+   QsTemp = "Output flow %1 mil/sec";
+   QsTemp = QsTemp.arg(f,3);
+   ui->label_G1Out->setText(QsTemp);
+}
+
+void MainWindow::updateT1Flow2(float f)
+{
+   QsTemp = "Input / Output flow %1 mil/sec";
+   QsTemp = QsTemp.arg(f,3);
+   ui->label_G3a->setText(QsTemp);
+}
+
+void MainWindow::updateT2Flow1(float f)
+{
+   QsTemp = "Output flow %1 mil/sec";
+   QsTemp = QsTemp.arg(f,3);
+   ui->label_G2Out->setText(QsTemp);
+}
+
+void MainWindow::updateT2Flow2(float f)
+{
+   QsTemp = "Input / Output flow %1 mil/sec";
+   QsTemp = QsTemp.arg(f,3);
+   ui->label_G3b->setText(QsTemp);
 }

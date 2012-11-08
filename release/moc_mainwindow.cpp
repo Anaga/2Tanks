@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon 10. Sep 22:36:48 2012
+** Created: Thu 8. Nov 11:55:53 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,6 +39,10 @@ static const uint qt_meta_data_MainWindow[] = {
      185,   11,   11,   11, 0x08,
      194,   11,   11,   11, 0x08,
      210,   11,   11,   11, 0x08,
+     226,   11,   11,   11, 0x08,
+     247,   11,   11,   11, 0x08,
+     268,   11,   11,   11, 0x08,
+     289,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -50,6 +54,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_pushButton_Q2Out_clicked(bool)\0"
     "on_pushButton_Q3_clicked(bool)\0update()\0"
     "updateT1(float)\0updateT2(float)\0"
+    "updateT1Flow1(float)\0updateT1Flow2(float)\0"
+    "updateT2Flow1(float)\0updateT2Flow2(float)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -89,9 +95,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: update(); break;
         case 6: updateT1((*reinterpret_cast< float(*)>(_a[1]))); break;
         case 7: updateT2((*reinterpret_cast< float(*)>(_a[1]))); break;
+        case 8: updateT1Flow1((*reinterpret_cast< float(*)>(_a[1]))); break;
+        case 9: updateT1Flow2((*reinterpret_cast< float(*)>(_a[1]))); break;
+        case 10: updateT2Flow1((*reinterpret_cast< float(*)>(_a[1]))); break;
+        case 11: updateT2Flow2((*reinterpret_cast< float(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 8;
+        _id -= 12;
     }
     return _id;
 }

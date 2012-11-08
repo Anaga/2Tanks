@@ -37,11 +37,11 @@ signals:
    void t1_HeightChange(float height);
    void t2_HeightChange(float height);
    // To do: emmit signals to notify output flows.
-   // t1_Output_Flow_1
-   // t1_Output_Flow_2
+   void t1_Output_Flow_1(float flow1);
+   void t1_Output_Flow_2(float flow2);
 
-   // t2_Output_Flow_1
-   // t2_Output_Flow_2
+   void t2_Output_Flow_1(float flow1);
+   void t2_Output_Flow_2(float flow2);
 
 public slots:
    void set_T1_InputFlow(float flow);

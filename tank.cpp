@@ -71,11 +71,13 @@ void Tank::tik()
       c = C1*sqrt(m_t1_height);
    }
 
+   emit t1_Output_Flow_1(c);
+   emit t1_Output_Flow_2(b);
+
 #if DEBUG
    qDebug() << "Old x1" << m_t1_height <<" a= "<< a <<" b= "<< b <<" c= "<< c;
 #endif
    x1 = m_t1_height + (a-b-c)*secInTik;
-
 
    x2 = 0;
    a = m_t2_inputFlow/m_t2_area;
@@ -86,6 +88,9 @@ void Tank::tik()
 #if DEBUG
    qDebug() << "Old x2" << m_t2_height <<" a= "<< a <<" b= "<< b <<" c= "<< c;
  #endif
+
+   emit t2_Output_Flow_1(c);
+   emit t2_Output_Flow_2(-b);
    x2 = m_t2_height + (a+b-c)*secInTik;
 
 
