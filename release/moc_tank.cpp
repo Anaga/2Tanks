@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tank.h'
 **
-** Created: Thu 8. Nov 11:47:54 2012
+** Created: Sun 11. Nov 16:36:03 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -25,6 +25,11 @@ private:
    float m_t1_inputFlow;   // Current input liquid flow (M%^3/Sec)
    bool  m_t1_outputValve; // Open/Close
 
+   // Tank area -       0.001018 m^2
+   // Tank radius -     0.018 m = 1.8 cm = 18 mm
+   // Tank diameter -   0.036 m = 3.6 cm = 36 mm
+   // Tank height -     0.25 m  = 25  cm = 250 mm
+
    float m_t2_height;      // Current liquid height in Tank (M)
    float m_t2_area;        // Area of tank (M^2)
    float m_t2_inputFlow;   // Current input liquid flow (M%^3/Sec)
