@@ -115,3 +115,8 @@ void MainWindow::updateT2Flow2(float f)
    QsTemp = QsTemp.arg(f,3);
    ui->label_G3b->setText(QsTemp);
 }
+
+void MainWindow::on_pushButton_Exit_clicked()
+{
+    MainWindow::close();
+}

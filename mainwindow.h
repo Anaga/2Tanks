@@ -36,6 +36,8 @@ private slots:
    void updateT2Flow1(float);
    void updateT2Flow2(float);
 
+   void on_pushButton_Exit_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

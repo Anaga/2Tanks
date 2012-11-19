@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed 7. Nov 16:05:39 2012
-**      by: Qt User Interface Compiler version 4.7.4
+** Created: Mon Nov 19 18:21:46 2012
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -39,6 +39,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_G1In;
     QDial *dialQ1In;
+    QPushButton *pushButton_Exit;
     QDial *dialQ2In;
     QLabel *label_G2In;
     QHBoxLayout *horizontalLayout_4;
@@ -84,6 +85,14 @@ public:
         dialQ1In->setObjectName(QString::fromUtf8("dialQ1In"));
 
         horizontalLayout_2->addWidget(dialQ1In);
+
+        pushButton_Exit = new QPushButton(centralWidget);
+        pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../opt/qt5/qtquick1/examples/declarative/ui-components/dialcontrol/qml/dialcontrol/content/quit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_Exit->setIcon(icon);
+
+        horizontalLayout_2->addWidget(pushButton_Exit);
 
         dialQ2In = new QDial(centralWidget);
         dialQ2In->setObjectName(QString::fromUtf8("dialQ2In"));
@@ -185,7 +194,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 589, 18));
+        menuBar->setGeometry(QRect(0, 0, 589, 25));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -205,6 +214,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "2 Tanks", 0, QApplication::UnicodeUTF8));
         label_G1In->setText(QString());
+        pushButton_Exit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
         label_G2In->setText(QString());
         label_G1Out->setText(QString());
         pushButton_Q1Out->setText(QApplication::translate("MainWindow", "T1 Out", 0, QApplication::UnicodeUTF8));

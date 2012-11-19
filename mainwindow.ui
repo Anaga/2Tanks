@@ -30,6 +30,17 @@
          <widget class="QDial" name="dialQ1In"/>
         </item>
         <item>
+         <widget class="QPushButton" name="pushButton_Exit">
+          <property name="text">
+           <string>Exit</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../opt/qt5/qtquick1/examples/declarative/ui-components/dialcontrol/qml/dialcontrol/content/quit.png</normaloff>../../opt/qt5/qtquick1/examples/declarative/ui-components/dialcontrol/qml/dialcontrol/content/quit.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QDial" name="dialQ2In"/>
         </item>
         <item>
@@ -152,7 +163,7 @@
      <x>0</x>
      <y>0</y>
      <width>589</width>
-     <height>18</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
