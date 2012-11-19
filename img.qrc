@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>docs/IMG/RoungScaleBG.png</file>
+        <file>docs/IMG/TumblerSwitchDown.png</file>
+        <file>docs/IMG/TumblerSwitchUp.png</file>
+    </qresource>
+</RCC>

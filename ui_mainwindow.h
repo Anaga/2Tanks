@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Nov 19 18:21:46 2012
+** Created: Mon Nov 19 23:38:19 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -165,7 +165,13 @@ public:
 
         pushButton_Q3 = new QPushButton(centralWidget);
         pushButton_Q3->setObjectName(QString::fromUtf8("pushButton_Q3"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/img/docs/IMG/TumblerSwitchDown.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/docs/IMG/TumblerSwitchUp.png"), QSize(), QIcon::Normal, QIcon::On);
+        pushButton_Q3->setIcon(icon1);
+        pushButton_Q3->setIconSize(QSize(32, 32));
         pushButton_Q3->setCheckable(true);
+        pushButton_Q3->setFlat(true);
 
         horizontalLayout_3->addWidget(pushButton_Q3);
 
@@ -214,12 +220,12 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "2 Tanks", 0, QApplication::UnicodeUTF8));
         label_G1In->setText(QString());
-        pushButton_Exit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
+        pushButton_Exit->setText(QApplication::translate("MainWindow", "Ex", 0, QApplication::UnicodeUTF8));
         label_G2In->setText(QString());
         label_G1Out->setText(QString());
         pushButton_Q1Out->setText(QApplication::translate("MainWindow", "T1 Out", 0, QApplication::UnicodeUTF8));
         label_G3a->setText(QString());
-        pushButton_Q3->setText(QApplication::translate("MainWindow", "Clapan", 0, QApplication::UnicodeUTF8));
+        pushButton_Q3->setText(QString());
         label_G3b->setText(QString());
         pushButton_Q2Out->setText(QApplication::translate("MainWindow", "T2 Out", 0, QApplication::UnicodeUTF8));
         label_G2Out->setText(QString());

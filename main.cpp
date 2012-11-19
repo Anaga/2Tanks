@@ -1,3 +1,5 @@
+//#include <QtWidgets/QApplication>
+//#include <QtWidgets/QStyle>
 #include <QApplication>
 #include <QStyle>
 #include "mainwindow.h"

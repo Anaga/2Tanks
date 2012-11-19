@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "tank.h"
 #include <QTimer>
+//#include <QtWidgets/QLCDNumber>
+
 #include <QLCDNumber>
 
 static Tank *pTank1 ;
